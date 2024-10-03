@@ -1,34 +1,30 @@
 package mk.ukim.finki.librardf.presentation;
 
-import mk.ukim.finki.librardf.models.Author;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import mk.ukim.finki.librardf.models.User;
+import mk.ukim.finki.librardf.requests.User.LoginRequest;
+import mk.ukim.finki.librardf.requests.User.RegisterRequest;
+import mk.ukim.finki.librardf.service.AuthService;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
-
-@RestController("auth")
+@RestController
+@RequestMapping("/api/auth")
 public class AuthController {
+    private final AuthService authService;
 
-    @GetMapping()
-    public List<Author> getAllAuthors(){
-        return new ArrayList<>();
+    public AuthController(AuthService authService) {
+        this.authService = authService;
     }
 
-    @GetMapping("/{authorId}")
-    public Author getAuthorById(@PathVariable int authorId){
-        return null;
+    @PostMapping("/register")
+    public boolean register(@RequestBody RegisterRequest request){
+        return authService.register(request);
     }
 
-    @PostMapping("/insert")
-    public Author insert(){
-        return null;
-    }
-
-    @PostMapping("/update")
-    public Author update(){
-        return null;
+    @PostMapping("/login")
+    public User login(@RequestBody LoginRequest request){
+        return authService.login(request);
     }
 }

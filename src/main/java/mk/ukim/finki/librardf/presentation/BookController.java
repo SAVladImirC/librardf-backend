@@ -1,44 +1,49 @@
 package mk.ukim.finki.librardf.presentation;
 
 import mk.ukim.finki.librardf.models.Book;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import mk.ukim.finki.librardf.models.GENRE;
+import mk.ukim.finki.librardf.service.BookService;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController("book")
+@RestController
+@RequestMapping("/api/book")
 public class BookController {
+    private final BookService bookService;
+
+    public BookController(BookService bookService) {
+        this.bookService = bookService;
+    }
 
     @GetMapping()
     public List<Book> getAllBooks(){
-        return new ArrayList<>();
+        return bookService.getAllBooks();
     }
 
-    @GetMapping("/{bookId}")
-    public Book getBookById(@PathVariable int bookId){
-        return null;
+    @GetMapping("/by-isbn/{isbn}")
+    public Book getBookByIsbn(@PathVariable String isbn){
+        return bookService.getBookByIsbn(isbn);
     }
 
-    @GetMapping("/{authorId}")
+    @GetMapping("/by-author/{authorId}")
     public List<Book> getAllBooksByAuthor(@PathVariable int authorId){
-        return new ArrayList<>();
+        return bookService.getAllBooksByAuthor(authorId);
     }
 
-    @GetMapping("/{genres}")
-    public List<Book> getAllBooksByGenre(@PathVariable String genres){
-        return new ArrayList<>();
+    @GetMapping("/by-genres/{genres}")
+    public List<Book> getAllBooksByGenre(@PathVariable GENRE[] genres){
+        return bookService.getAllBooksByGenre(genres);
     }
 
     @PostMapping("/insert")
-    public Book insert(){
-        return null;
+    public boolean insert(@RequestBody Book book){
+        return this.bookService.insert(book);
     }
 
     @PostMapping("/update")
-    public Book update(){
-        return null;
+    public boolean update(@RequestBody Book book){
+        return this.bookService.update(book);
     }
 }

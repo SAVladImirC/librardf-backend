@@ -1,6 +1,7 @@
 package mk.ukim.finki.librardf.models;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Author {
     int id;
@@ -12,7 +13,7 @@ public class Author {
     String nationality;
     String imageUrl;
     String biography;
-
+    List<Book> books;
     public int getId() {
         return id;
     }
@@ -75,5 +76,21 @@ public class Author {
 
     public void setBiography(String biography) {
         this.biography = biography;
+    }
+
+    public GENRE[] getGenres() {
+        return genres;
+    }
+
+    public void setGenres(GENRE[] genres) {
+        this.genres = genres;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
     }
 }

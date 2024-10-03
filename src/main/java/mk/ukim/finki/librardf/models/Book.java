@@ -110,4 +110,12 @@ public class Book {
     public void setYear(int year) {
         this.year = year;
     }
+
+    public GENRE[] getGenres() {
+        return genres;
+    }
+
+    public void setGenres(GENRE[] genres) {
+        this.genres = genres;
+    }
 }
