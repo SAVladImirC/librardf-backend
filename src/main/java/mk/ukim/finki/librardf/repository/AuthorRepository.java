@@ -6,6 +6,8 @@ import mk.ukim.finki.librardf.models.Book;
 import mk.ukim.finki.librardf.models.GENRE;
 import mk.ukim.finki.librardf.properties.AuthorProperties;
 import mk.ukim.finki.librardf.properties.BookProperties;
+import mk.ukim.finki.librardf.requests.Author.InsertRequest;
+import mk.ukim.finki.librardf.requests.Author.UpdateRequest;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QuerySolution;
@@ -20,6 +22,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 @Repository
 public class AuthorRepository extends BaseRepository{
@@ -89,6 +92,49 @@ public class AuthorRepository extends BaseRepository{
         return authors;
     }
 
+    public List<Author> getAllAuthorsFiltered(String filter){
+        List<Author> authors = new ArrayList<>();
+        Model model = loadModel();
+
+        String sparqlQuery = "PREFIX finki: <http://finki.ukim.mk/> " +
+                "SELECT ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography (GROUP_CONCAT(?genres; SEPARATOR=\",\") AS ?genres_) " +
+                "WHERE { " +
+                "    ?author finki:id ?id . " +
+                "    ?author finki:name ?name . " +
+                "    ?author finki:surname ?surname . " +
+                "    ?author finki:dob ?dob . " +
+                "    ?author finki:dod ?dod . " +
+                "    ?author finki:nationality ?nationality . " +
+                "    ?author finki:image_url ?image_url . " +
+                "    ?author finki:biography ?biography . " +
+                "    FILTER (CONTAINS(LCASE(?name), LCASE(\"" + filter + "\")) || " +
+                "            CONTAINS(LCASE(?surname), LCASE(\"" + filter + "\"))) " +
+                "} GROUP BY ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography";
+
+        try (QueryExecution qexec = QueryExecutionFactory.create(sparqlQuery, model)) {
+            ResultSet results = qexec.execSelect();
+
+            while (results.hasNext()) {
+                QuerySolution soln = results.nextSolution();
+                Author author = new Author();
+
+                // Set author properties
+                author.setId(soln.get("id").asLiteral().getInt());
+                author.setName(soln.get("name").toString());
+                author.setSurname(soln.get("surname").toString());
+                author.setDob(LocalDate.parse(soln.get("dob").toString()));
+                author.setDod(LocalDate.parse(soln.get("dod").toString()));
+                author.setNationality(soln.get("nationality").toString());
+                author.setImageUrl(soln.get("image_url").toString());
+                author.setBiography(soln.get("biography").toString());
+
+                // Set the author in the book
+                authors.add(author);
+            }
+        }
+        return authors;
+    }
+
     public Author getAuthorById(int id){
         Model model = loadModel();
         Author author = new Author();
@@ -102,6 +148,7 @@ public class AuthorRepository extends BaseRepository{
                 "    ?author finki:surname ?surname . " +
                 "    ?author finki:dob ?dob . " +
                 "    ?author finki:dod ?dod . " +
+                "    ?author finki:genres ?genres . " +
                 "    ?author finki:nationality ?nationality . " +
                 "    ?author finki:image_url ?image_url . " +
                 "    ?author finki:biography ?biography . " +
@@ -117,6 +164,8 @@ public class AuthorRepository extends BaseRepository{
                 author.setId(soln.get("id").asLiteral().getInt());
                 author.setName(soln.get("name").toString());
                 author.setSurname(soln.get("surname").toString());
+                GENRE[] genres = Arrays.stream(soln.get("genres_").toString().split(",")).map(GENRE::valueOf).toArray(GENRE[]::new);
+                author.setGenres(genres);
                 author.setDob(LocalDate.parse(soln.get("dob").toString()));
                 author.setDod(LocalDate.parse(soln.get("dod").toString()));
                 author.setNationality(soln.get("nationality").toString());
@@ -128,21 +177,24 @@ public class AuthorRepository extends BaseRepository{
         return author;
     }
 
-    public boolean insert(Author author){
+    public boolean insert(InsertRequest request){
         try{
             Model model = loadModel();
 
-            Resource authorRes = model.createResource(AuthorProperties.BASE + author.getId())
-                    .addProperty(id, String.valueOf(author.getId()))
-                    .addProperty(name, author.getName())
-                    .addProperty(surname, author.getSurname())
-                    .addProperty(dob, author.getDob().toString())
-                    .addProperty(dod, author.getDod().toString())
-                    .addProperty(nationality, author.getNationality())
-                    .addProperty(imageUrl, author.getImageUrl())
-                    .addProperty(biography, author.getBiography());
+            Random random = new Random();
+            int randomId = random.nextInt(1000000) + 1;
 
-            for(GENRE g: author.getGenres()){
+            Resource authorRes = model.createResource(AuthorProperties.BASE + randomId)
+                    .addProperty(id, String.valueOf(randomId))
+                    .addProperty(name, request.name)
+                    .addProperty(surname, request.surname)
+                    .addProperty(dob, (request.dob != null) ? request.dob.toString() : "")
+                    .addProperty(dod, (request.dod != null) ? request.dod.toString() : "")
+                    .addProperty(nationality, request.nationality)
+                    .addProperty(imageUrl, request.imageUrl)
+                    .addProperty(biography, request.biography);
+
+            for(GENRE g: request.genres){
                 authorRes.addProperty(genres, g.toString());
             }
 
@@ -155,22 +207,21 @@ public class AuthorRepository extends BaseRepository{
         }
     }
 
-    public boolean update(Author author){
+    public boolean update(UpdateRequest request){
         try{
             Model model = loadModel();
-            Resource authorRes = model.getResource(AuthorProperties.BASE + author.getId());
+            Resource authorRes = model.getResource(AuthorProperties.BASE + request.id);
 
-            authorRes.removeAll(id).addProperty(id, String.valueOf(author.getId()));
-            authorRes.removeAll(name).addProperty(name, author.getName());
-            authorRes.removeAll(surname).addProperty(surname, author.getSurname());
-            authorRes.removeAll(dob).addProperty(dob, author.getDob().toString());
-            authorRes.removeAll(dod).addProperty(dod, author.getDod().toString());
-            authorRes.removeAll(nationality).addProperty(nationality, author.getNationality());
-            authorRes.removeAll(imageUrl).addProperty(imageUrl, author.getImageUrl());
-            authorRes.removeAll(biography).addProperty(biography, author.getBiography());;
+            authorRes.removeAll(name).addProperty(name, request.name);
+            authorRes.removeAll(surname).addProperty(surname, request.surname);
+            authorRes.removeAll(dob).addProperty(dob, (request.dob != null) ? request.dob.toString() : "");
+            authorRes.removeAll(dod).addProperty(dod, (request.dod != null) ? request.dod.toString() : "");
+            authorRes.removeAll(nationality).addProperty(nationality, request.nationality);
+            authorRes.removeAll(imageUrl).addProperty(imageUrl, request.imageUrl);
+            authorRes.removeAll(biography).addProperty(biography, request.biography);;
 
             authorRes.removeAll(genres);
-            for(GENRE g: author.getGenres()){
+            for(GENRE g: request.genres){
                 authorRes.addProperty(genres, g.toString());
             }
 

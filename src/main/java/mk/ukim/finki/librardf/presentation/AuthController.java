@@ -4,10 +4,7 @@ import mk.ukim.finki.librardf.models.User;
 import mk.ukim.finki.librardf.requests.User.LoginRequest;
 import mk.ukim.finki.librardf.requests.User.RegisterRequest;
 import mk.ukim.finki.librardf.service.AuthService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")

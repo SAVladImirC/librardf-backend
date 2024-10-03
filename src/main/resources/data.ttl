@@ -77,3 +77,15 @@
         <http://finki.ukim.mk/nationality>
                 "Nigeriaan";
         <http://finki.ukim.mk/surname>  "Achebee" .
+
+<http://finki.ukim.mk/user/304063>
+        <http://finki.ukim.mk/address>  "Kumanovo";
+        <http://finki.ukim.mk/email>    "trajko@test.com";
+        <http://finki.ukim.mk/password>
+                "Test123";
+        <http://finki.ukim.mk/role>     "USER";
+        <http://finki.ukim.mk/user_id>  "304063";
+        <http://finki.ukim.mk/user_name>
+                "Trajko";
+        <http://finki.ukim.mk/user_surname>
+                "Trajkovski" .
