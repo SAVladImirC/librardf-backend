@@ -1,91 +1,71 @@
-<http://finki.ukim.mk/book/ab1231>
-        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/2>;
-        <http://finki.ukim.mk/country>  "Denmark";
-        <http://finki.ukim.mk/full_description>
-                "Hans Christian Andersen's Fairy Tales have transcended generations and geographical boundaries, captivating both children and adults. Stories like The Little Mermaid, The Ugly Duckling, and The Snow Queen contain elements of wonder, magic, and heartbreak, offering lessons about human nature, love, and societal values. Andersen’s tales often feature protagonists who overcome great adversity or experience personal transformation, which mirror the author's own life struggles. Though aimed at children, these stories engage with universal truths about sacrifice, beauty, and the pursuit of happiness.";
-        <http://finki.ukim.mk/genres>   "ChildrensLiterature" , "Fantasy";
-        <http://finki.ukim.mk/image_link>
-                "images/fairy-tales.jpg";
-        <http://finki.ukim.mk/isbn>     "ab1231";
-        <http://finki.ukim.mk/language>
-                "Danish";
-        <http://finki.ukim.mk/link>     "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\n";
-        <http://finki.ukim.mk/pages>    "784";
-        <http://finki.ukim.mk/publisher>
-                "Various";
-        <http://finki.ukim.mk/short_description>
-                "A collection of magical stories for children, filled with moral lessons and emotional depth.";
-        <http://finki.ukim.mk/title>    "Fairy tales";
-        <http://finki.ukim.mk/year>     "1836" .
+<http://finki.ukim.mk/genre/381126>
+        <http://finki.ukim.mk/genre_id>
+                "381126";
+        <http://finki.ukim.mk/genre_name>
+                "Poem" .
 
-<http://finki.ukim.mk/user/669139>
-        <http://finki.ukim.mk/address>  "Kumanovo";
-        <http://finki.ukim.mk/email>    "vackocs@gmail.com";
-        <http://finki.ukim.mk/password>
-                "Test123";
-        <http://finki.ukim.mk/role>     "USER";
-        <http://finki.ukim.mk/user_id>  "669139";
-        <http://finki.ukim.mk/user_name>
-                "Vladimir";
-        <http://finki.ukim.mk/user_surname>
-                "Savikj" .
-
-<http://finki.ukim.mk/author/2>
+<http://finki.ukim.mk/author/926642>
         <http://finki.ukim.mk/biography>
-                "Hans Christian Andersen was a Danish author renowned for his fairy tales, including 'The Little Mermaid,' 'The Ugly Duckling,' and 'The Princess and the Pea.' His stories often convey moral lessons and reflect his deep empathy for the underprivileged and marginalized.";
-        <http://finki.ukim.mk/dob>      "1805-04-02";
-        <http://finki.ukim.mk/dod>      "1875-08-04";
-        <http://finki.ukim.mk/genres>   "FairyTales" , "ChildrensLiterature";
-        <http://finki.ukim.mk/id>       "2";
+                "Walt Whitman was an American poet, essayist, and journalist, best known for his groundbreaking collection of poetry, 'Leaves of Grass.' Whitman's work is characterized by its celebration of the individual, nature, and the human experience, as well as its innovative free verse style. His poetry explores themes of democracy, equality, and the interconnectedness of all people. Whitman’s frank exploration of sexuality and his embrace of the body as a source of beauty and strength were considered revolutionary for his time. He is often regarded as one of the most significant figures in American literature.";
+        <http://finki.ukim.mk/dob>      "1819-05-31";
+        <http://finki.ukim.mk/dod>      "1892-03-26";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/704242> , <http://finki.ukim.mk/genre/960408>;
+        <http://finki.ukim.mk/id>       "926642";
         <http://finki.ukim.mk/image_url>
-                "https://cdn.shopify.com/s/files/1/0925/3888/files/Hans_Christian_Andersen.jpg?v=1478790035";
-        <http://finki.ukim.mk/name>     "Hans Christian";
+                "https://example.com/image.jpg";
+        <http://finki.ukim.mk/name>     "Walt";
         <http://finki.ukim.mk/nationality>
-                "Danish";
-        <http://finki.ukim.mk/surname>  "Andersen" .
+                "American";
+        <http://finki.ukim.mk/surname>  "Whitman" .
 
-<http://finki.ukim.mk/book/ab123>
-        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/1>;
-        <http://finki.ukim.mk/country>  "Nigeriaa";
+<http://finki.ukim.mk/genre/960408>
+        <http://finki.ukim.mk/genre_id>
+                "960408";
+        <http://finki.ukim.mk/genre_name>
+                "Essay" .
+
+<http://finki.ukim.mk/book/8dFcJQTUwA>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/926642>;
+        <http://finki.ukim.mk/country>  "United States";
         <http://finki.ukim.mk/full_description>
-                "Things Fall Apart is set in pre-colonial Nigeria and tells the story of Okonkwo, a powerful and influential man in the Igbo society of Umuofia. As European missionaries and colonial administrators start influencing the community, Okonkwo struggles to maintain his position and beliefs. Achebe's narrative highlights the complexities of African traditions and the devastating effects of colonialism. The novel explores themes of masculinity, pride, change, and identity, creating a powerful commentary on cultural clash and transformationa.";
-        <http://finki.ukim.mk/genres>   "Fiction" , "HistoricalFiction";
+                "First published as part of Walt Whitman's 'Leaves of Grass,' 'Song of Myself' is one of the most iconic and influential poems in American literature. Through a free-verse style, Whitman celebrates the self, democracy, the body, and the interconnectedness of all life.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/381126>;
         <http://finki.ukim.mk/image_link>
-                "images/things-fall-apart.jpga";
-        <http://finki.ukim.mk/isbn>     "ab123";
+                "https://m.media-amazon.com/images/I/61wsWTej-7L._AC_UF1000,1000_QL80_.jpg";
+        <http://finki.ukim.mk/isbn>     "8dFcJQTUwA";
         <http://finki.ukim.mk/language>
-                "Englisha";
-        <http://finki.ukim.mk/link>     "https://en.wikipedia.org/wiki/Things_Fall_Apart\n";
-        <http://finki.ukim.mk/pages>    "2093";
+                "English";
+        <http://finki.ukim.mk/link>     "https://en.wikipedia.org/wiki/Song_of_Myself";
+        <http://finki.ukim.mk/pages>    "80";
         <http://finki.ukim.mk/publisher>
-                "Heinemanna";
+                "Self-published";
         <http://finki.ukim.mk/short_description>
-                "A novel about Okonkwo, a Nigerian man, whose life is upended by colonialism and the arrival of Christian missionariesa.";
-        <http://finki.ukim.mk/title>    "Things Fall Aparta";
-        <http://finki.ukim.mk/year>     "1918" .
+                "A profound exploration of individuality, nature, and humanity.";
+        <http://finki.ukim.mk/title>    "Song of Myself";
+        <http://finki.ukim.mk/year>     "1855" .
 
-<http://finki.ukim.mk/author/1>
-        <http://finki.ukim.mk/biography>
-                "aChinua Achebe was a Nigerian novelist, poet, professor, and critic, best known for his first novel, 'Things Fall Apart' (1958), which is considered a classic of African literature and has been translated into more than 50 languages. His works explore the themes of colonialism and its impact on African identity and culture.";
-        <http://finki.ukim.mk/dob>      "1930-12-16";
-        <http://finki.ukim.mk/dod>      "2013-03-22";
-        <http://finki.ukim.mk/genres>   "Fiction" , "NonFiction";
-        <http://finki.ukim.mk/id>       "1";
-        <http://finki.ukim.mk/image_url>
-                "https://www.theparisreview.org/il/e4b8f842fe/medium/Chinua-Achebe.jpga";
-        <http://finki.ukim.mk/name>     "Chinuaa";
-        <http://finki.ukim.mk/nationality>
-                "Nigeriaan";
-        <http://finki.ukim.mk/surname>  "Achebee" .
+<http://finki.ukim.mk/book/E7A7RogZl0>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/926642>;
+        <http://finki.ukim.mk/country>  "United States";
+        <http://finki.ukim.mk/full_description>
+                "Leaves of Grass is a seminal work of American poetry by Walt Whitman, first published in 1855 and expanded throughout his life. The collection is known for its free verse style and its celebration of democracy, nature, love, and the human spirit. Whitman’s poetry broke with traditional forms, capturing the rhythms of everyday speech and embracing a uniquely American voice. Themes of individualism, sensuality, and transcendence run throughout the work, particularly in poems like “Song of Myself.” Leaves of Grass remains a defining text in American literature, hailed for its innovation and Whitman’s visionary embrace of the individual’s place within the larger fabric of society.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/704242> , <http://finki.ukim.mk/genre/960408>;
+        <http://finki.ukim.mk/image_link>
+                "images-local/leaves-of-grass.jpg";
+        <http://finki.ukim.mk/isbn>     "E7A7RogZl0";
+        <http://finki.ukim.mk/language>
+                "English";
+        <http://finki.ukim.mk/link>     "https://en.wikipedia.org/wiki/Leaves_of_Grass";
+        <http://finki.ukim.mk/pages>    "152";
+        <http://finki.ukim.mk/publisher>
+                "Self-published";
+        <http://finki.ukim.mk/short_description>
+                "A groundbreaking collection of poems celebrating the individual, nature, and the American spirit.";
+        <http://finki.ukim.mk/title>    "Leaves of Grass";
+        <http://finki.ukim.mk/year>     "1855" .
 
-<http://finki.ukim.mk/user/304063>
-        <http://finki.ukim.mk/address>  "Kumanovo";
-        <http://finki.ukim.mk/email>    "trajko@test.com";
-        <http://finki.ukim.mk/password>
-                "Test123";
-        <http://finki.ukim.mk/role>     "USER";
-        <http://finki.ukim.mk/user_id>  "304063";
-        <http://finki.ukim.mk/user_name>
-                "Trajko";
-        <http://finki.ukim.mk/user_surname>
-                "Trajkovski" .
+<http://finki.ukim.mk/genre/704242>
+        <http://finki.ukim.mk/genre_id>
+                "704242";
+        <http://finki.ukim.mk/genre_name>
+                "Poetry" .

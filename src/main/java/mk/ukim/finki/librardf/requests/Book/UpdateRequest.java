@@ -1,7 +1,5 @@
 package mk.ukim.finki.librardf.requests.Book;
 
-import mk.ukim.finki.librardf.models.GENRE;
-
 public class UpdateRequest {
     public String isbn;
     public String title;
@@ -15,5 +13,5 @@ public class UpdateRequest {
     public int pages;
     public String country;
     public int authorId;
-    public GENRE[] genres;
+    public int[] genres;
 }

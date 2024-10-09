@@ -1,13 +1,11 @@
 package mk.ukim.finki.librardf.service;
 
 import mk.ukim.finki.librardf.models.Book;
-import mk.ukim.finki.librardf.models.GENRE;
 import mk.ukim.finki.librardf.repository.AuthorRepository;
 import mk.ukim.finki.librardf.repository.BookRepository;
 import mk.ukim.finki.librardf.requests.Book.InsertRequest;
 import mk.ukim.finki.librardf.requests.Book.UpdateRequest;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 import java.util.Objects;
@@ -50,7 +48,7 @@ public class BookService {
         return this.bookRepository.getAllBooksByAuthor(authorId);
     }
 
-    public List<Book> getAllBooksByGenre(GENRE[] genres){
+    public List<Book> getAllBooksByGenre(int[] genres){
         return this.bookRepository.getAllBooksByGenre(genres);
     }
 }

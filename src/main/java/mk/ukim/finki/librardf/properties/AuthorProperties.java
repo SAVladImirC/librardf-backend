@@ -1,11 +1,5 @@
 package mk.ukim.finki.librardf.properties;
 
-import mk.ukim.finki.librardf.models.Book;
-import mk.ukim.finki.librardf.models.GENRE;
-
-import java.time.LocalDate;
-import java.util.List;
-
 public class AuthorProperties {
     public static final String BASE = "http://finki.ukim.mk/author/";
     public static final String ID = "http://finki.ukim.mk/id";

@@ -1,11 +1,8 @@
 package mk.ukim.finki.librardf.repository;
 
 import mk.ukim.finki.librardf.configuration.RdfConfig;
-import mk.ukim.finki.librardf.models.Author;
-import mk.ukim.finki.librardf.models.GENRE;
 import mk.ukim.finki.librardf.models.ROLE;
 import mk.ukim.finki.librardf.models.User;
-import mk.ukim.finki.librardf.properties.AuthorProperties;
 import mk.ukim.finki.librardf.properties.UserProperties;
 import mk.ukim.finki.librardf.requests.User.LoginRequest;
 import mk.ukim.finki.librardf.requests.User.RegisterRequest;
@@ -15,11 +12,9 @@ import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Property;
-import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.ResourceFactory;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDate;
 import java.util.Random;
 
 @Repository

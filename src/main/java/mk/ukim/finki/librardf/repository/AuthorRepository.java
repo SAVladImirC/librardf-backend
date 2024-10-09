@@ -2,10 +2,9 @@ package mk.ukim.finki.librardf.repository;
 
 import mk.ukim.finki.librardf.configuration.RdfConfig;
 import mk.ukim.finki.librardf.models.Author;
-import mk.ukim.finki.librardf.models.Book;
-import mk.ukim.finki.librardf.models.GENRE;
+import mk.ukim.finki.librardf.models.Genre;
 import mk.ukim.finki.librardf.properties.AuthorProperties;
-import mk.ukim.finki.librardf.properties.BookProperties;
+import mk.ukim.finki.librardf.properties.GenreProperties;
 import mk.ukim.finki.librardf.requests.Author.InsertRequest;
 import mk.ukim.finki.librardf.requests.Author.UpdateRequest;
 import org.apache.jena.query.QueryExecution;
@@ -20,7 +19,6 @@ import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -56,16 +54,20 @@ public class AuthorRepository extends BaseRepository{
         Model model = loadModel();
 
         String sparqlQuery = "PREFIX finki: <http://finki.ukim.mk/> " +
-                "SELECT ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography (GROUP_CONCAT(?genres; SEPARATOR=\",\") AS ?genres_) " +
+                "SELECT ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography (GROUP_CONCAT(?genre_id; SEPARATOR=\",\") AS ?genre_ids) (GROUP_CONCAT(?genre_name; SEPARATOR=\",\") AS ?genre_names) " +
                 "WHERE { " +
                 "    ?author finki:id ?id . " +
                 "    ?author finki:name ?name . " +
                 "    ?author finki:surname ?surname . " +
                 "    ?author finki:dob ?dob . " +
                 "    ?author finki:dod ?dod . " +
+                "    ?author finki:genres ?genres . " +
                 "    ?author finki:nationality ?nationality . " +
                 "    ?author finki:image_url ?image_url . " +
                 "    ?author finki:biography ?biography . " +
+                "    ?author finki:genres ?genres . " +
+                "    ?genres finki:genre_id ?genre_id . " +
+                "    ?genres finki:genre_name ?genre_name . " +
                 "} GROUP BY ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography";
 
         try (QueryExecution qexec = QueryExecutionFactory.create(sparqlQuery, model)) {
@@ -76,14 +78,7 @@ public class AuthorRepository extends BaseRepository{
                 Author author = new Author();
 
                 // Set author properties
-                author.setId(soln.get("id").asLiteral().getInt());
-                author.setName(soln.get("name").toString());
-                author.setSurname(soln.get("surname").toString());
-                author.setDob(LocalDate.parse(soln.get("dob").toString()));
-                author.setDod(LocalDate.parse(soln.get("dod").toString()));
-                author.setNationality(soln.get("nationality").toString());
-                author.setImageUrl(soln.get("image_url").toString());
-                author.setBiography(soln.get("biography").toString());
+                setAuthor(soln, author);
 
                 // Set the author in the book
                 authors.add(author);
@@ -97,7 +92,7 @@ public class AuthorRepository extends BaseRepository{
         Model model = loadModel();
 
         String sparqlQuery = "PREFIX finki: <http://finki.ukim.mk/> " +
-                "SELECT ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography (GROUP_CONCAT(?genres; SEPARATOR=\",\") AS ?genres_) " +
+                "SELECT ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography (GROUP_CONCAT(?genre_id; SEPARATOR=\",\") AS ?genre_ids) (GROUP_CONCAT(?genre_name; SEPARATOR=\",\") AS ?genre_names) " +
                 "WHERE { " +
                 "    ?author finki:id ?id . " +
                 "    ?author finki:name ?name . " +
@@ -107,6 +102,9 @@ public class AuthorRepository extends BaseRepository{
                 "    ?author finki:nationality ?nationality . " +
                 "    ?author finki:image_url ?image_url . " +
                 "    ?author finki:biography ?biography . " +
+                "    ?author finki:genres ?genres . " +
+                "    ?genres finki:genre_id ?genre_id . " +
+                "    ?genres finki:genre_name ?genre_name . " +
                 "    FILTER (CONTAINS(LCASE(?name), LCASE(\"" + filter + "\")) || " +
                 "            CONTAINS(LCASE(?surname), LCASE(\"" + filter + "\"))) " +
                 "} GROUP BY ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography";
@@ -119,14 +117,7 @@ public class AuthorRepository extends BaseRepository{
                 Author author = new Author();
 
                 // Set author properties
-                author.setId(soln.get("id").asLiteral().getInt());
-                author.setName(soln.get("name").toString());
-                author.setSurname(soln.get("surname").toString());
-                author.setDob(LocalDate.parse(soln.get("dob").toString()));
-                author.setDod(LocalDate.parse(soln.get("dod").toString()));
-                author.setNationality(soln.get("nationality").toString());
-                author.setImageUrl(soln.get("image_url").toString());
-                author.setBiography(soln.get("biography").toString());
+                setAuthor(soln, author);
 
                 // Set the author in the book
                 authors.add(author);
@@ -140,7 +131,7 @@ public class AuthorRepository extends BaseRepository{
         Author author = new Author();
 
         String sparqlQuery = "PREFIX finki: <http://finki.ukim.mk/> " +
-                "SELECT ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography (GROUP_CONCAT(?genres; SEPARATOR=\",\") AS ?genres_) " +
+                "SELECT ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography (GROUP_CONCAT(?genre_id; SEPARATOR=\",\") AS ?genre_ids) (GROUP_CONCAT(?genre_name; SEPARATOR=\",\") AS ?genre_names) " +
                 "WHERE { " +
                 "    ?author finki:id ?id . " +
                 "    ?author finki:id \"" + id + "\" . " +
@@ -148,31 +139,23 @@ public class AuthorRepository extends BaseRepository{
                 "    ?author finki:surname ?surname . " +
                 "    ?author finki:dob ?dob . " +
                 "    ?author finki:dod ?dod . " +
-                "    ?author finki:genres ?genres . " +
                 "    ?author finki:nationality ?nationality . " +
                 "    ?author finki:image_url ?image_url . " +
                 "    ?author finki:biography ?biography . " +
+                "    ?author finki:genres ?genres . " +
+                "    ?genres finki:genre_id ?genre_id . " +
+                "    ?genres finki:genre_name ?genre_name . " +
                 "} GROUP BY ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography";
 
         try (QueryExecution qexec = QueryExecutionFactory.create(sparqlQuery, model)) {
             ResultSet results = qexec.execSelect();
 
-            if (results.hasNext()) {
+            while (results.hasNext()) {
                 QuerySolution soln = results.nextSolution();
 
                 // Set author properties
-                author.setId(soln.get("id").asLiteral().getInt());
-                author.setName(soln.get("name").toString());
-                author.setSurname(soln.get("surname").toString());
-                GENRE[] genres = Arrays.stream(soln.get("genres_").toString().split(",")).map(GENRE::valueOf).toArray(GENRE[]::new);
-                author.setGenres(genres);
-                author.setDob(LocalDate.parse(soln.get("dob").toString()));
-                author.setDod(LocalDate.parse(soln.get("dod").toString()));
-                author.setNationality(soln.get("nationality").toString());
-                author.setImageUrl(soln.get("image_url").toString());
-                author.setBiography(soln.get("biography").toString());
+                setAuthor(soln, author);
             }
-            else return null;
         }
         return author;
     }
@@ -194,8 +177,9 @@ public class AuthorRepository extends BaseRepository{
                     .addProperty(imageUrl, request.imageUrl)
                     .addProperty(biography, request.biography);
 
-            for(GENRE g: request.genres){
-                authorRes.addProperty(genres, g.toString());
+            for(int genreId: request.genres){
+                Resource genre = model.getResource(GenreProperties.BASE + genreId);
+                authorRes.addProperty(genres, genre);
             }
 
             saveModel(model);
@@ -221,8 +205,9 @@ public class AuthorRepository extends BaseRepository{
             authorRes.removeAll(biography).addProperty(biography, request.biography);;
 
             authorRes.removeAll(genres);
-            for(GENRE g: request.genres){
-                authorRes.addProperty(genres, g.toString());
+            for(int genreId: request.genres){
+                Resource genre = model.getResource(GenreProperties.BASE + genreId);
+                authorRes.addProperty(genres, genre);
             }
 
             saveModel(model);
@@ -232,5 +217,29 @@ public class AuthorRepository extends BaseRepository{
             e.printStackTrace();
             return false;
         }
+    }
+
+    private void setAuthor(QuerySolution soln, Author author) {
+        String[] genreNames = soln.get("genre_names").toString().split(",");
+        String[] genreIds = soln.get("genre_ids").toString().split(",");
+        List<Genre> genres = new ArrayList<>();
+
+        author.setId(soln.get("id").asLiteral().getInt());
+        author.setName(soln.get("name").toString());
+        author.setSurname(soln.get("surname").toString());
+        author.setDob(LocalDate.parse(soln.get("dob").toString()));
+        author.setDod(LocalDate.parse(soln.get("dod").toString()));
+        author.setNationality(soln.get("nationality").toString());
+        author.setImageUrl(soln.get("image_url").toString());
+        author.setBiography(soln.get("biography").toString());
+
+        for(int i = 0; i < genreNames.length; i++){
+            Genre genre = new Genre();
+            genre.setId(Integer.parseInt(genreIds[i]));
+            genre.setName(genreNames[i]);
+            genres.add(genre);
+        }
+
+        author.setGenres(genres);
     }
 }

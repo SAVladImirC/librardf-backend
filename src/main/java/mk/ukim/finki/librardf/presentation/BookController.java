@@ -1,14 +1,11 @@
 package mk.ukim.finki.librardf.presentation;
 
-import mk.ukim.finki.librardf.models.Author;
 import mk.ukim.finki.librardf.models.Book;
-import mk.ukim.finki.librardf.models.GENRE;
 import mk.ukim.finki.librardf.requests.Book.InsertRequest;
 import mk.ukim.finki.librardf.requests.Book.UpdateRequest;
 import mk.ukim.finki.librardf.service.BookService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -41,7 +38,7 @@ public class BookController {
     }
 
     @GetMapping("/by-genres/{genres}")
-    public List<Book> getAllBooksByGenre(@PathVariable GENRE[] genres){
+    public List<Book> getAllBooksByGenre(@PathVariable int[] genres){
         return bookService.getAllBooksByGenre(genres);
     }
 

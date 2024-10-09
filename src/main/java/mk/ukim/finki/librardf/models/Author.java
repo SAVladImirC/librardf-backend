@@ -7,7 +7,7 @@ public class Author {
     int id;
     String name;
     String surname;
-    GENRE[] genres;
+    List<Genre> genres;
     LocalDate dob;
     LocalDate dod;
     String nationality;
@@ -78,11 +78,11 @@ public class Author {
         this.biography = biography;
     }
 
-    public GENRE[] getGenres() {
+    public List<Genre> getGenres() {
         return genres;
     }
 
-    public void setGenres(GENRE[] genres) {
+    public void setGenres(List<Genre> genres) {
         this.genres = genres;
     }
 

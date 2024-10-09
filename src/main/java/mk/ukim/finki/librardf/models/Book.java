@@ -1,5 +1,7 @@
 package mk.ukim.finki.librardf.models;
 
+import java.util.List;
+
 public class Book {
     String isbn;
     Author author;
@@ -12,7 +14,7 @@ public class Book {
     String shortDescription;
     String fullDescription;
     String publisher;
-    GENRE[] genres;
+    List<Genre> genres;
     int year;
 
     public String getIsbn() {
@@ -111,11 +113,11 @@ public class Book {
         this.year = year;
     }
 
-    public GENRE[] getGenres() {
+    public List<Genre> getGenres() {
         return genres;
     }
 
-    public void setGenres(GENRE[] genres) {
+    public void setGenres(List<Genre> genres) {
         this.genres = genres;
     }
 }

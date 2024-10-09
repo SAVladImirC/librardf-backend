@@ -14,6 +14,6 @@ public class BookProperties {
     public static final String LANGUAGE = "http://finki.ukim.mk/language";
     public static final String ISBN = "http://finki.ukim.mk/isbn";
     public static final String YEAR = "http://finki.ukim.mk/year";
-    public static final String GENRE = "http://finki.ukim.mk/genres";
+    public static final String GENRES = "http://finki.ukim.mk/genres";
     public static final String AUTHOR = "http://finki.ukim.mk/author";
 }
