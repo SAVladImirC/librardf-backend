@@ -27,6 +27,10 @@ public class AuthorService {
         return authorRepository.getAllAuthorsFiltered(filter);
     }
 
+    public List<Author> getAllAuthorsByGenre(int[] genres){
+        return authorRepository.getAllAuthorsByGenre(genres);
+    }
+
     public Author getAuthorById(int id){
         return authorRepository.getAuthorById(id);
     }

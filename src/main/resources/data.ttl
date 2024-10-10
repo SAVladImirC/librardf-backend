@@ -1,71 +1,740 @@
-<http://finki.ukim.mk/genre/381126>
-        <http://finki.ukim.mk/genre_id>
-                "381126";
-        <http://finki.ukim.mk/genre_name>
-                "Poem" .
-
-<http://finki.ukim.mk/author/926642>
+<http://finki.ukim.mk/author/631587>
         <http://finki.ukim.mk/biography>
-                "Walt Whitman was an American poet, essayist, and journalist, best known for his groundbreaking collection of poetry, 'Leaves of Grass.' Whitman's work is characterized by its celebration of the individual, nature, and the human experience, as well as its innovative free verse style. His poetry explores themes of democracy, equality, and the interconnectedness of all people. Whitman’s frank exploration of sexuality and his embrace of the body as a source of beauty and strength were considered revolutionary for his time. He is often regarded as one of the most significant figures in American literature.";
-        <http://finki.ukim.mk/dob>      "1819-05-31";
-        <http://finki.ukim.mk/dod>      "1892-03-26";
-        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/704242> , <http://finki.ukim.mk/genre/960408>;
-        <http://finki.ukim.mk/id>       "926642";
+                "Grigor Prlicev was a Macedonian poet and teacher, best known for his epic poem \"The Serdar\". Often called the \"Second Homer,\" he gained international recognition after winning a poetry contest in Athens in 1860. Prlicev spent much of his life promoting education in the local language and translating works from Greek. Despite facing challenges later in life, his contributions to Macedonian literature and national identity remain significant.";
+        <http://finki.ukim.mk/dob>      "1830-01-18";
+        <http://finki.ukim.mk/dod>      "1893-02-06";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/747157>;
+        <http://finki.ukim.mk/id>       "631587";
         <http://finki.ukim.mk/image_url>
-                "https://example.com/image.jpg";
-        <http://finki.ukim.mk/name>     "Walt";
+                "data:image/jpeg;base64,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";
+        <http://finki.ukim.mk/name>     "Grigor";
+        <http://finki.ukim.mk/nationality>
+                "Macedonian";
+        <http://finki.ukim.mk/surname>  "Prlicev" .
+
+<http://finki.ukim.mk/genre/229171>
+        <http://finki.ukim.mk/genre_id>
+                "229171";
+        <http://finki.ukim.mk/genre_name>
+                "Realist Fiction" .
+
+<http://finki.ukim.mk/genre/10696>
+        <http://finki.ukim.mk/genre_id>
+                "10696";
+        <http://finki.ukim.mk/genre_name>
+                "Philosophical Novel" .
+
+<http://finki.ukim.mk/author/487395>
+        <http://finki.ukim.mk/biography>
+                "Edgar Allan Poe was an American writer and poet, known for his macabre and gothic tales. His notable works, including 'The Raven' and 'The Tell-Tale Heart,' explore themes of death, madness, and the human psyche.";
+        <http://finki.ukim.mk/dob>      "1809-01-19";
+        <http://finki.ukim.mk/dod>      "1849-10-07";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/621375> , <http://finki.ukim.mk/genre/817076> , <http://finki.ukim.mk/genre/687639>;
+        <http://finki.ukim.mk/id>       "487395";
+        <http://finki.ukim.mk/image_url>
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFOuqpxRHO5La4BDyYmjkDWpRzSeX4EJA5IQ&s";
+        <http://finki.ukim.mk/name>     "Edgar";
         <http://finki.ukim.mk/nationality>
                 "American";
-        <http://finki.ukim.mk/surname>  "Whitman" .
+        <http://finki.ukim.mk/surname>  "Allan Poe" .
 
-<http://finki.ukim.mk/genre/960408>
+<http://finki.ukim.mk/genre/912385>
         <http://finki.ukim.mk/genre_id>
-                "960408";
+                "912385";
         <http://finki.ukim.mk/genre_name>
-                "Essay" .
+                "Classic Literature" .
 
-<http://finki.ukim.mk/book/8dFcJQTUwA>
-        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/926642>;
-        <http://finki.ukim.mk/country>  "United States";
-        <http://finki.ukim.mk/full_description>
-                "First published as part of Walt Whitman's 'Leaves of Grass,' 'Song of Myself' is one of the most iconic and influential poems in American literature. Through a free-verse style, Whitman celebrates the self, democracy, the body, and the interconnectedness of all life.";
-        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/381126>;
-        <http://finki.ukim.mk/image_link>
-                "https://m.media-amazon.com/images/I/61wsWTej-7L._AC_UF1000,1000_QL80_.jpg";
-        <http://finki.ukim.mk/isbn>     "8dFcJQTUwA";
-        <http://finki.ukim.mk/language>
-                "English";
-        <http://finki.ukim.mk/link>     "https://en.wikipedia.org/wiki/Song_of_Myself";
-        <http://finki.ukim.mk/pages>    "80";
-        <http://finki.ukim.mk/publisher>
-                "Self-published";
-        <http://finki.ukim.mk/short_description>
-                "A profound exploration of individuality, nature, and humanity.";
-        <http://finki.ukim.mk/title>    "Song of Myself";
-        <http://finki.ukim.mk/year>     "1855" .
-
-<http://finki.ukim.mk/book/E7A7RogZl0>
-        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/926642>;
-        <http://finki.ukim.mk/country>  "United States";
-        <http://finki.ukim.mk/full_description>
-                "Leaves of Grass is a seminal work of American poetry by Walt Whitman, first published in 1855 and expanded throughout his life. The collection is known for its free verse style and its celebration of democracy, nature, love, and the human spirit. Whitman’s poetry broke with traditional forms, capturing the rhythms of everyday speech and embracing a uniquely American voice. Themes of individualism, sensuality, and transcendence run throughout the work, particularly in poems like “Song of Myself.” Leaves of Grass remains a defining text in American literature, hailed for its innovation and Whitman’s visionary embrace of the individual’s place within the larger fabric of society.";
-        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/704242> , <http://finki.ukim.mk/genre/960408>;
-        <http://finki.ukim.mk/image_link>
-                "images-local/leaves-of-grass.jpg";
-        <http://finki.ukim.mk/isbn>     "E7A7RogZl0";
-        <http://finki.ukim.mk/language>
-                "English";
-        <http://finki.ukim.mk/link>     "https://en.wikipedia.org/wiki/Leaves_of_Grass";
-        <http://finki.ukim.mk/pages>    "152";
-        <http://finki.ukim.mk/publisher>
-                "Self-published";
-        <http://finki.ukim.mk/short_description>
-                "A groundbreaking collection of poems celebrating the individual, nature, and the American spirit.";
-        <http://finki.ukim.mk/title>    "Leaves of Grass";
-        <http://finki.ukim.mk/year>     "1855" .
-
-<http://finki.ukim.mk/genre/704242>
+<http://finki.ukim.mk/genre/708649>
         <http://finki.ukim.mk/genre_id>
-                "704242";
+                "708649";
+        <http://finki.ukim.mk/genre_name>
+                "Philosophical Literature" .
+
+<http://finki.ukim.mk/genre/511953>
+        <http://finki.ukim.mk/genre_id>
+                "511953";
+        <http://finki.ukim.mk/genre_name>
+                "Fantasy" .
+
+<http://finki.ukim.mk/genre/961451>
+        <http://finki.ukim.mk/genre_id>
+                "961451";
+        <http://finki.ukim.mk/genre_name>
+                "Romance" .
+
+<http://finki.ukim.mk/genre/404170>
+        <http://finki.ukim.mk/genre_id>
+                "404170";
+        <http://finki.ukim.mk/genre_name>
+                "Love Story" .
+
+<http://finki.ukim.mk/genre/245272>
+        <http://finki.ukim.mk/genre_id>
+                "245272";
+        <http://finki.ukim.mk/genre_name>
+                "Political Novel" .
+
+<http://finki.ukim.mk/genre/199810>
+        <http://finki.ukim.mk/genre_id>
+                "199810";
+        <http://finki.ukim.mk/genre_name>
+                "Modern Chinese Literature" .
+
+<http://finki.ukim.mk/book/1W8KgnArr5>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/664440>;
+        <http://finki.ukim.mk/country>  "Russia";
+        <http://finki.ukim.mk/full_description>
+                "Crime and Punishment is a profound exploration of morality, guilt, and redemption, following the troubled protagonist, Raskolnikov, a former student living in St. Petersburg. Raskolnikov develops a theory that certain extraordinary individuals are above the law and believes he can justify the murder of a pawnbroker for a greater good. However, after committing the crime, he is plagued by guilt and paranoia, leading to a psychological unraveling. Dostoevsky delves into themes of morality, justice, and the consequences of alienation, ultimately exploring the possibility of redemption through suffering. The novel's intricate character development and philosophical depth have established it as a cornerstone of world literature.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/952447>;
+        <http://finki.ukim.mk/image_link>
+                "https://images.booksense.com/images/505/734/9780679734505.jpg";
+        <http://finki.ukim.mk/isbn>     "1W8KgnArr5";
+        <http://finki.ukim.mk/language>
+                "Russian";
+        <http://finki.ukim.mk/pages>    "551";
+        <http://finki.ukim.mk/publisher>
+                "The Russian Messenger";
+        <http://finki.ukim.mk/short_description>
+                "A psychological drama exploring the moral dilemmas of Raskolnikov, a student who commits murder.";
+        <http://finki.ukim.mk/title>    "Crime and Punishment";
+        <http://finki.ukim.mk/year>     "1886" .
+
+<http://finki.ukim.mk/genre/733901>
+        <http://finki.ukim.mk/genre_id>
+                "733901";
+        <http://finki.ukim.mk/genre_name>
+                "Post-Colonial Fiction" .
+
+<http://finki.ukim.mk/genre/190124>
+        <http://finki.ukim.mk/genre_id>
+                "190124";
+        <http://finki.ukim.mk/genre_name>
+                "Literary Fiction" .
+
+<http://finki.ukim.mk/author/664440>
+        <http://finki.ukim.mk/biography>
+                "Fyodor Dostoevsky was a Russian novelist and philosopher, renowned for his exploration of psychology and morality in works such as 'Crime and Punishment,' 'The Brothers Karamazov,' and 'The Idiot.' His writings delve into the complexities of human existence and the struggle between faith and doubt.";
+        <http://finki.ukim.mk/dob>      "1821-11-11";
+        <http://finki.ukim.mk/dod>      "1881-02-09";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/195083> , <http://finki.ukim.mk/genre/784925>;
+        <http://finki.ukim.mk/id>       "664440";
+        <http://finki.ukim.mk/image_url>
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg/220px-Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg";
+        <http://finki.ukim.mk/name>     "Fyodor";
+        <http://finki.ukim.mk/nationality>
+                "Russian";
+        <http://finki.ukim.mk/surname>  "Dostoevsky" .
+
+<http://finki.ukim.mk/genre/377438>
+        <http://finki.ukim.mk/genre_id>
+                "377438";
+        <http://finki.ukim.mk/genre_name>
+                "Adventure" .
+
+<http://finki.ukim.mk/genre/747157>
+        <http://finki.ukim.mk/genre_id>
+                "747157";
+        <http://finki.ukim.mk/genre_name>
+                "Epic Poetry" .
+
+<http://finki.ukim.mk/genre/548326>
+        <http://finki.ukim.mk/genre_id>
+                "548326";
+        <http://finki.ukim.mk/genre_name>
+                "Dystopian Fiction" .
+
+<http://finki.ukim.mk/genre/722221>
+        <http://finki.ukim.mk/genre_id>
+                "722221";
+        <http://finki.ukim.mk/genre_name>
+                "Modernist" .
+
+<http://finki.ukim.mk/genre/806701>
+        <http://finki.ukim.mk/genre_id>
+                "806701";
+        <http://finki.ukim.mk/genre_name>
+                "Religious Text" .
+
+<http://finki.ukim.mk/genre/564298>
+        <http://finki.ukim.mk/genre_id>
+                "564298";
+        <http://finki.ukim.mk/genre_name>
+                "Philosophical Fiction" .
+
+<http://finki.ukim.mk/genre/360559>
+        <http://finki.ukim.mk/genre_id>
+                "360559";
+        <http://finki.ukim.mk/genre_name>
+                "Sufi Poetry" .
+
+<http://finki.ukim.mk/user/148261>
+        <http://finki.ukim.mk/address>  "bul. Oktomvriska Revolucija 19A-2/12";
+        <http://finki.ukim.mk/email>    "vackocs@gmail.com";
+        <http://finki.ukim.mk/password>
+                "Test123";
+        <http://finki.ukim.mk/role>     "LIBRARIAN";
+        <http://finki.ukim.mk/user_id>  "148261";
+        <http://finki.ukim.mk/user_name>
+                "Vladimir";
+        <http://finki.ukim.mk/user_surname>
+                "Savikj" .
+
+<http://finki.ukim.mk/genre/573515>
+        <http://finki.ukim.mk/genre_id>
+                "573515";
+        <http://finki.ukim.mk/genre_name>
+                "Feminist Fiction" .
+
+<http://finki.ukim.mk/genre/411438>
+        <http://finki.ukim.mk/genre_id>
+                "411438";
+        <http://finki.ukim.mk/genre_name>
+                "Modernist Fiction" .
+
+<http://finki.ukim.mk/genre/856538>
+        <http://finki.ukim.mk/genre_id>
+                "856538";
+        <http://finki.ukim.mk/genre_name>
+                "Modern Japanese Literature" .
+
+<http://finki.ukim.mk/book/jEjcBRkSeY>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/886951>;
+        <http://finki.ukim.mk/country>  "United Kingdom";
+        <http://finki.ukim.mk/full_description>
+                "To the Lighthouse is a seminal work by Virginia Woolf, first published in 1927. The novel is a hallmark of modernist literature, known for its stream-of-consciousness narrative style. It follows the Ramsay family during two separate visits to their vacation home on the Isle of Skye, separated by a period that includes World War I. The novel explores complex themes of time, memory, loss, and the transient nature of human experience. Through the lens of various characters’ thoughts and reflections, Woolf examines the intricacies of human relationships, particularly the roles of gender and creativity.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/411438>;
+        <http://finki.ukim.mk/image_link>
+                "https://covers.storytel.com/jpg-640/9781515459200.899cf7d9-dc06-476c-8ba2-dbdf5cac6176?optimize=high";
+        <http://finki.ukim.mk/isbn>     "jEjcBRkSeY";
+        <http://finki.ukim.mk/language>
+                "English";
+        <http://finki.ukim.mk/pages>    "209";
+        <http://finki.ukim.mk/publisher>
+                "Hogarth Press";
+        <http://finki.ukim.mk/short_description>
+                "A modernist novel exploring the Ramsay family and their experiences before and after World War I.";
+        <http://finki.ukim.mk/title>    "To the Lighthouse";
+        <http://finki.ukim.mk/year>     "1927" .
+
+<http://finki.ukim.mk/genre/982887>
+        <http://finki.ukim.mk/genre_id>
+                "982887";
+        <http://finki.ukim.mk/genre_name>
+                "Absurdist Fiction" .
+
+<http://finki.ukim.mk/author/707524>
+        <http://finki.ukim.mk/biography>
+                "Leo Tolstoy was a Russian writer and philosopher, widely regarded as one of the greatest novelists of all time. His notable works, including 'War and Peace' and 'Anna Karenina,' explore moral dilemmas and the complexities of human nature.";
+        <http://finki.ukim.mk/dob>      "1828-09-09";
+        <http://finki.ukim.mk/dod>      "1910-11-20";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/784925> , <http://finki.ukim.mk/genre/195083>;
+        <http://finki.ukim.mk/id>       "707524";
+        <http://finki.ukim.mk/image_url>
+                "https://cdn.britannica.com/94/4694-050-CABE0BB0/Leo-Tolstoy.jpg";
+        <http://finki.ukim.mk/name>     "Leo";
+        <http://finki.ukim.mk/nationality>
+                "Russian";
+        <http://finki.ukim.mk/surname>  "Tolstoy" .
+
+<http://finki.ukim.mk/genre/776480>
+        <http://finki.ukim.mk/genre_id>
+                "776480";
+        <http://finki.ukim.mk/genre_name>
+                "Satirical Fiction" .
+
+<http://finki.ukim.mk/genre/561381>
+        <http://finki.ukim.mk/genre_id>
+                "561381";
+        <http://finki.ukim.mk/genre_name>
+                "Sanskrit Drama" .
+
+<http://finki.ukim.mk/genre/227569>
+        <http://finki.ukim.mk/genre_id>
+                "227569";
+        <http://finki.ukim.mk/genre_name>
+                "Folklore" .
+
+<http://finki.ukim.mk/genre/890264>
+        <http://finki.ukim.mk/genre_id>
+                "890264";
+        <http://finki.ukim.mk/genre_name>
+                "Children’s Fiction" .
+
+<http://finki.ukim.mk/genre/305057>
+        <http://finki.ukim.mk/genre_id>
+                "305057";
+        <http://finki.ukim.mk/genre_name>
+                "Novella" .
+
+<http://finki.ukim.mk/genre/90801>
+        <http://finki.ukim.mk/genre_id>
+                "90801";
+        <http://finki.ukim.mk/genre_name>
+                "Frame Story" .
+
+<http://finki.ukim.mk/genre/817076>
+        <http://finki.ukim.mk/genre_id>
+                "817076";
+        <http://finki.ukim.mk/genre_name>
+                "Short Stories" .
+
+<http://finki.ukim.mk/genre/510503>
+        <http://finki.ukim.mk/genre_id>
+                "510503";
+        <http://finki.ukim.mk/genre_name>
+                "Persian Poetry" .
+
+<http://finki.ukim.mk/genre/547181>
+        <http://finki.ukim.mk/genre_id>
+                "547181";
+        <http://finki.ukim.mk/genre_name>
+                "Mythology" .
+
+<http://finki.ukim.mk/genre/195083>
+        <http://finki.ukim.mk/genre_id>
+                "195083";
+        <http://finki.ukim.mk/genre_name>
+                "Philosophy" .
+
+<http://finki.ukim.mk/book/HdKCT4nNAe>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/862067>;
+        <http://finki.ukim.mk/country>  "Czechoslovakia";
+        <http://finki.ukim.mk/full_description>
+                "Franz Kafka’s Stories encompass a range of works that delve into the complexities of human existence, often characterized by surreal and nightmarish elements. Kafka's writing explores themes of alienation, guilt, and the absurdity of bureaucratic systems, reflecting his own struggles with identity and societal expectations. Notable stories include \\\"The Metamorphosis\\\", where a man wakes to find himself transformed into a giant insect, and \\\"The Judgment\\\", which addresses familial conflict and existential dread. Kafka’s prose is marked by a sense of inevitability and anxiety, often leaving readers with unresolved questions. His unique blend of reality and the fantastical has solidified his status as one of the most significant literary figures of the 20th century, with profound influences on existentialism and modern literature.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/817076> , <http://finki.ukim.mk/genre/85152>;
+        <http://finki.ukim.mk/image_link>
+                "images-local/stories-of-franz-kafka.jpg";
+        <http://finki.ukim.mk/isbn>     "HdKCT4nNAe";
+        <http://finki.ukim.mk/language>
+                "German";
+        <http://finki.ukim.mk/pages>    "488";
+        <http://finki.ukim.mk/publisher>
+                "Schocken Books";
+        <http://finki.ukim.mk/short_description>
+                "A collection of Kafka's short stories, highlighting themes of alienation, existential anxiety, and the absurdity of modern life.";
+        <http://finki.ukim.mk/title>    "Stories";
+        <http://finki.ukim.mk/year>     "1924" .
+
+<http://finki.ukim.mk/genre/952447>
+        <http://finki.ukim.mk/genre_id>
+                "952447";
+        <http://finki.ukim.mk/genre_name>
+                "Psychological Fiction" .
+
+<http://finki.ukim.mk/author/379258>
+        <http://finki.ukim.mk/biography>
+                "William Shakespeare was an English playwright and poet, widely regarded as one of the greatest writers in the English language. His works, including 'Hamlet,' 'Romeo and Juliet,' and 'Macbeth,' explore themes of love, power, and human nature.";
+        <http://finki.ukim.mk/dob>      "1564-04-23";
+        <http://finki.ukim.mk/dod>      "1616-04-23";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/101160> , <http://finki.ukim.mk/genre/621375>;
+        <http://finki.ukim.mk/id>       "379258";
+        <http://finki.ukim.mk/image_url>
+                "https://c02.purpledshub.com/uploads/sites/41/2020/03/GettyImages-51246881-1-27f82f0.jpg?webp=1&w=1200";
+        <http://finki.ukim.mk/name>     "William";
+        <http://finki.ukim.mk/nationality>
+                "English";
+        <http://finki.ukim.mk/surname>  "Shakespeare" .
+
+<http://finki.ukim.mk/genre/574886>
+        <http://finki.ukim.mk/genre_id>
+                "574886";
+        <http://finki.ukim.mk/genre_name>
+                "Victorian Literature" .
+
+<http://finki.ukim.mk/genre/370878>
+        <http://finki.ukim.mk/genre_id>
+                "370878";
+        <http://finki.ukim.mk/genre_name>
+                "Epic" .
+
+<http://finki.ukim.mk/genre/784925>
+        <http://finki.ukim.mk/genre_id>
+                "784925";
+        <http://finki.ukim.mk/genre_name>
+                "Novel" .
+
+<http://finki.ukim.mk/genre/40833>
+        <http://finki.ukim.mk/genre_id>
+                "40833";
+        <http://finki.ukim.mk/genre_name>
+                "Spiritual Literature" .
+
+<http://finki.ukim.mk/genre/39032>
+        <http://finki.ukim.mk/genre_id>
+                "39032";
+        <http://finki.ukim.mk/genre_name>
+                "Magic Realism" .
+
+<http://finki.ukim.mk/book/sYGBBcIm3V>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/379258>;
+        <http://finki.ukim.mk/country>  "England";
+        <http://finki.ukim.mk/full_description>
+                "Hamlet is one of William Shakespeare’s most famous tragedies, centered around the young Prince of Denmark, who is driven to avenge his father’s murder by his uncle Claudius. As Hamlet wrestles with his conscience, sanity, and the corrupt world around him, the play explores themes of revenge, madness, betrayal, and the human condition. With its complex characters, philosophical soliloquies, and exploration of existential themes, Hamlet remains one of the most influential and performed works in the English literary canon. Shakespeare's use of rich language and deep psychological insight has ensured the play’s enduring significance for over four centuries.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/101160> , <http://finki.ukim.mk/genre/991924>;
+        <http://finki.ukim.mk/image_link>
+                "images-local/hamlet.jpg";
+        <http://finki.ukim.mk/isbn>     "sYGBBcIm3V";
+        <http://finki.ukim.mk/language>
+                "English";
+        <http://finki.ukim.mk/pages>    "432";
+        <http://finki.ukim.mk/publisher>
+                "First Folio";
+        <http://finki.ukim.mk/short_description>
+                "The Prince of Denmark seeks revenge for his father’s murder, descending into madness and tragedy.";
+        <http://finki.ukim.mk/title>    "Hamlet";
+        <http://finki.ukim.mk/year>     "1603" .
+
+<http://finki.ukim.mk/genre/579725>
+        <http://finki.ukim.mk/genre_id>
+                "579725";
+        <http://finki.ukim.mk/genre_name>
+                "Regionalism" .
+
+<http://finki.ukim.mk/genre/655621>
+        <http://finki.ukim.mk/genre_id>
+                "655621";
+        <http://finki.ukim.mk/genre_name>
+                "Southern Gothic" .
+
+<http://finki.ukim.mk/book/GU3UNr0SpO>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/487395>;
+        <http://finki.ukim.mk/country>  "United States";
+        <http://finki.ukim.mk/full_description>
+                "Edgar Allan Poe’s Tales is a quintessential anthology that showcases his mastery of the short story form and his profound impact on the genres of horror and Gothic literature. This collection includes some of his most famous works, such as \\\"The Tell-Tale Heart\\\", \\\"The Fall of the House of Usher\\\" and \\\"The Cask of Amontillado\\\", which delve into the depths of the human psyche, exploring themes of guilt, obsession, and the supernatural. Poe's writing is characterized by its vivid imagery, intricate plots, and a haunting atmosphere that captivates readers. His unique ability to blend psychological tension with elements of the bizarre and grotesque has left an indelible mark on literature, influencing countless writers and establishing the foundation for modern horror fiction. With Tales, readers are invited into a world where reality blurs with nightmare, making it an essential collection for fans of the macabre.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/687639> , <http://finki.ukim.mk/genre/945395>;
+        <http://finki.ukim.mk/image_link>
+                "images-local/tales-and-poems-of-edgar-allan-poe.jpg";
+        <http://finki.ukim.mk/isbn>     "GU3UNr0SpO";
+        <http://finki.ukim.mk/language>
+                "English";
+        <http://finki.ukim.mk/pages>    "842";
+        <http://finki.ukim.mk/publisher>
+                "Penguin Classics";
+        <http://finki.ukim.mk/short_description>
+                "A collection of Poe's dark and imaginative short stories, exploring themes of madness, mortality, and the macabre.";
+        <http://finki.ukim.mk/title>    "Tales";
+        <http://finki.ukim.mk/year>     "1950" .
+
+<http://finki.ukim.mk/genre/629667>
+        <http://finki.ukim.mk/genre_id>
+                "629667";
+        <http://finki.ukim.mk/genre_name>
+                "Adventure Fiction" .
+
+<http://finki.ukim.mk/genre/346859>
+        <http://finki.ukim.mk/genre_id>
+                "346859";
+        <http://finki.ukim.mk/genre_name>
+                "Family Saga" .
+
+<http://finki.ukim.mk/genre/932223>
+        <http://finki.ukim.mk/genre_id>
+                "932223";
+        <http://finki.ukim.mk/genre_name>
+                "Classic Japanese Literature" .
+
+<http://finki.ukim.mk/genre/531771>
+        <http://finki.ukim.mk/genre_id>
+                "531771";
+        <http://finki.ukim.mk/genre_name>
+                "Satirical Novel" .
+
+<http://finki.ukim.mk/genre/613614>
+        <http://finki.ukim.mk/genre_id>
+                "613614";
+        <http://finki.ukim.mk/genre_name>
+                "Children's Literature" .
+
+<http://finki.ukim.mk/author/886951>
+        <http://finki.ukim.mk/biography>
+                "Virginia Woolf was an English writer and modernist, known for her influential novels and essays. Her major works, including 'Mrs. Dalloway' and 'To the Lighthouse,' explore themes of consciousness, gender, and the passage of time.";
+        <http://finki.ukim.mk/dob>      "1882-01-25";
+        <http://finki.ukim.mk/dod>      "1941-03-28";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/784925>;
+        <http://finki.ukim.mk/id>       "886951";
+        <http://finki.ukim.mk/image_url>
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF1eIF4IY0qZXF1M-7lB6ONq3KlejQZPx2OQ&s";
+        <http://finki.ukim.mk/name>     "Virginia";
+        <http://finki.ukim.mk/nationality>
+                "British";
+        <http://finki.ukim.mk/surname>  "Woolf" .
+
+<http://finki.ukim.mk/book/ULTgmsDu8M>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/631587>;
+        <http://finki.ukim.mk/country>  "Ottoman Empire (present-day North Macedonia)";
+        <http://finki.ukim.mk/full_description>
+                "The Serdar is Grigor Prlicev’s most famous work, written in 1860. This epic poem tells the tale of Kuzman Kapidan, a heroic leader who defends his village from Ottoman invaders. Written in a highly classical style, Prlicev’s poem is deeply influenced by ancient Greek epics and Balkan folklore. The work celebrates heroism, loyalty, and the struggle for freedom. Its publication brought Prlicev great fame, earning him the prestigious first prize at the Athens Poetry Contest, where he was hailed as the 'Second Homer.' The Serdar remains an important symbol of Macedonian national identity and literary heritage.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/611346> , <http://finki.ukim.mk/genre/747157>;
+        <http://finki.ukim.mk/image_link>
+                "https://lh3.googleusercontent.com/proxy/XKAkj2ChacW7xKv45d3bTkWjy_GO0GAx2gHaYMxgFTP40I7y-pw22jQPmvMNuulZPiO2ITVGC9WrwiRqsCX-OTkWRHJAI1NS_PRO3T3L1AZ7yNPm-0Bhfz4l6TrgV1NPP5hIjetAQHDEnbjj";
+        <http://finki.ukim.mk/isbn>     "ULTgmsDu8M";
+        <http://finki.ukim.mk/language>
+                "Macedonian";
+        <http://finki.ukim.mk/pages>    "50";
+        <http://finki.ukim.mk/publisher>
+                "Self-published";
+        <http://finki.ukim.mk/short_description>
+                "An epic poem recounting the heroic defense of a village against Ottoman invaders.";
+        <http://finki.ukim.mk/title>    "The Serdar";
+        <http://finki.ukim.mk/year>     "1860" .
+
+<http://finki.ukim.mk/book/5nmKP0Vsph>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/487395>;
+        <http://finki.ukim.mk/country>  "United States";
+        <http://finki.ukim.mk/full_description>
+                "The Raven is a narrative poem written by Edgar Allan Poe, first published in 1845. It tells the story of a man who, while mourning the loss of his beloved Lenore, is visited by a mysterious raven that speaks only the word 'Nevermore.' The poem explores profound themes of grief, despair, and the struggle against madness. Poe's use of rhythm, meter, and vivid imagery creates a haunting atmosphere that captivates readers. 'The Raven' is considered one of Poe's most famous and enduring works, solidifying his reputation as a master of macabre literature.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/945395> , <http://finki.ukim.mk/genre/621375>;
+        <http://finki.ukim.mk/image_link>
+                "https://m.media-amazon.com/images/I/51O1TEQcsVL._AC_UF1000,1000_QL80_.jpg";
+        <http://finki.ukim.mk/isbn>     "5nmKP0Vsph";
+        <http://finki.ukim.mk/language>
+                "English";
+        <http://finki.ukim.mk/pages>    "18";
+        <http://finki.ukim.mk/publisher>
+                "James Russell Lowell";
+        <http://finki.ukim.mk/short_description>
+                "A narrative poem exploring themes of grief, loss, and madness through the haunting visit of a mysterious raven.";
+        <http://finki.ukim.mk/title>    "The Raven";
+        <http://finki.ukim.mk/year>     "1845" .
+
+<http://finki.ukim.mk/genre/353205>
+        <http://finki.ukim.mk/genre_id>
+                "353205";
+        <http://finki.ukim.mk/genre_name>
+                "Realism" .
+
+<http://finki.ukim.mk/genre/266509>
+        <http://finki.ukim.mk/genre_id>
+                "266509";
+        <http://finki.ukim.mk/genre_name>
+                "Fiction" .
+
+<http://finki.ukim.mk/genre/25887>
+        <http://finki.ukim.mk/genre_id>
+                "25887";
+        <http://finki.ukim.mk/genre_name>
+                "Allegorical Fiction" .
+
+<http://finki.ukim.mk/genre/945395>
+        <http://finki.ukim.mk/genre_id>
+                "945395";
+        <http://finki.ukim.mk/genre_name>
+                "Gothic Fiction" .
+
+<http://finki.ukim.mk/genre/401840>
+        <http://finki.ukim.mk/genre_id>
+                "401840";
+        <http://finki.ukim.mk/genre_name>
+                "Ancient Greek Drama" .
+
+<http://finki.ukim.mk/genre/85152>
+        <http://finki.ukim.mk/genre_id>
+                "85152";
+        <http://finki.ukim.mk/genre_name>
+                "Existential Fiction" .
+
+<http://finki.ukim.mk/genre/898904>
+        <http://finki.ukim.mk/genre_id>
+                "898904";
+        <http://finki.ukim.mk/genre_name>
+                "Social Realism" .
+
+<http://finki.ukim.mk/book/xo44sWN4jd>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/886951>;
+        <http://finki.ukim.mk/country>  "United Kingdom";
+        <http://finki.ukim.mk/full_description>
+                "Mrs Dalloway is Virginia Woolf’s modernist masterpiece that captures the inner thoughts and emotions of its characters over the course of a single day. The novel centers on Clarissa Dalloway, a high-society woman preparing for a party in post-World War I London, but expands to include the lives of other characters, including a war veteran suffering from shell shock. Through Woolf’s innovative stream-of-consciousness technique, Mrs Dalloway delves into themes of time, memory, mental illness, and the complexity of human relationships. The novel is a poignant meditation on the passage of time and the ephemeral nature of life.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/394032> , <http://finki.ukim.mk/genre/784925>;
+        <http://finki.ukim.mk/image_link>
+                "images-local/mrs-dalloway.jpg";
+        <http://finki.ukim.mk/isbn>     "xo44sWN4jd";
+        <http://finki.ukim.mk/language>
+                "English";
+        <http://finki.ukim.mk/pages>    "216";
+        <http://finki.ukim.mk/publisher>
+                "Hogarth Press";
+        <http://finki.ukim.mk/short_description>
+                "A day in the life of Clarissa Dalloway as she prepares for a party, reflecting on her past and present.";
+        <http://finki.ukim.mk/title>    "Mrs Dalloway";
+        <http://finki.ukim.mk/year>     "1925" .
+
+<http://finki.ukim.mk/book/bz15WqX4O0>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/707524>;
+        <http://finki.ukim.mk/country>  "Russia";
+        <http://finki.ukim.mk/full_description>
+                "War and Peace is Leo Tolstoy’s monumental novel that intertwines the lives of Russian aristocrats with the tumultuous events of the Napoleonic Wars. Through the stories of Pierre Bezukhov, Prince Andrei Bolkonsky, and Natasha Rostova, Tolstoy examines the moral dilemmas, emotional struggles, and existential crises of his characters against the backdrop of historical events. The novel explores themes of fate, free will, love, and death, while Tolstoy also delves into philosophical discussions on the nature of war and historical determinism. War and Peace is celebrated for its rich character development, detailed historical setting, and its profound reflections on the human condition, making it one of the greatest works of world literature.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/370878> , <http://finki.ukim.mk/genre/611346>;
+        <http://finki.ukim.mk/image_link>
+                "images-local/war-and-peace.jpg";
+        <http://finki.ukim.mk/isbn>     "bz15WqX4O0";
+        <http://finki.ukim.mk/language>
+                "Russian";
+        <http://finki.ukim.mk/pages>    "1296";
+        <http://finki.ukim.mk/publisher>
+                "The Russian Messenger";
+        <http://finki.ukim.mk/short_description>
+                "A sweeping epic of Russia’s aristocracy during the Napoleonic Wars, interwoven with philosophical reflections on history.";
+        <http://finki.ukim.mk/title>    "War and Peace";
+        <http://finki.ukim.mk/year>     "1867" .
+
+<http://finki.ukim.mk/genre/800258>
+        <http://finki.ukim.mk/genre_id>
+                "800258";
+        <http://finki.ukim.mk/genre_name>
+                "Classic Romance" .
+
+<http://finki.ukim.mk/genre/801331>
+        <http://finki.ukim.mk/genre_id>
+                "801331";
+        <http://finki.ukim.mk/genre_name>
+                "Modern Arabic Literature" .
+
+<http://finki.ukim.mk/genre/990569>
+        <http://finki.ukim.mk/genre_id>
+                "990569";
+        <http://finki.ukim.mk/genre_name>
+                "Political Fiction" .
+
+<http://finki.ukim.mk/genre/572301>
+        <http://finki.ukim.mk/genre_id>
+                "572301";
+        <http://finki.ukim.mk/genre_name>
+                "Experimental Literature" .
+
+<http://finki.ukim.mk/genre/54073>
+        <http://finki.ukim.mk/genre_id>
+                "54073";
+        <http://finki.ukim.mk/genre_name>
+                "Short Story" .
+
+<http://finki.ukim.mk/genre/687639>
+        <http://finki.ukim.mk/genre_id>
+                "687639";
+        <http://finki.ukim.mk/genre_name>
+                "Horror" .
+
+<http://finki.ukim.mk/genre/101160>
+        <http://finki.ukim.mk/genre_id>
+                "101160";
+        <http://finki.ukim.mk/genre_name>
+                "Drama" .
+
+<http://finki.ukim.mk/book/GfVz7CDp8D>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/664440>;
+        <http://finki.ukim.mk/country>  "Russia";
+        <http://finki.ukim.mk/full_description>
+                "The Possessed (also known as Demons or The Devils) is one of Fyodor Dostoevsky's major novels, examining the political unrest in 19th-century Russia through the lens of a small provincial town. The story revolves around the manipulative Pyotr Verkhovensky and the idealistic Nikolai Stavrogin, who represent two opposing forces of revolutionary zeal and moral nihilism. As the town descends into chaos and violence, Dostoevsky explores the destructive consequences of radical ideologies and the inherent dangers of abandoning moral and religious principles. The novel is a powerful reflection on the rise of political extremism, making it a deeply philosophical and psychologically intense work.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/952447> , <http://finki.ukim.mk/genre/245272>;
+        <http://finki.ukim.mk/image_link>
+                "images-local/the-possessed.jpg";
+        <http://finki.ukim.mk/isbn>     "GfVz7CDp8D";
+        <http://finki.ukim.mk/language>
+                "Russian";
+        <http://finki.ukim.mk/pages>    "768";
+        <http://finki.ukim.mk/publisher>
+                "The Russian Messenger";
+        <http://finki.ukim.mk/short_description>
+                "A novel depicting the moral and political chaos in Russia, driven by radical intellectuals.";
+        <http://finki.ukim.mk/title>    "The Possessed";
+        <http://finki.ukim.mk/year>     "1872" .
+
+<http://finki.ukim.mk/author/862067>
+        <http://finki.ukim.mk/biography>
+                "Franz Kafka was a German-speaking Bohemian writer known for his surreal and existential works. His major works, including 'The Metamorphosis' and 'The Trial,' explore themes of alienation, bureaucracy, and the absurdity of existence.";
+        <http://finki.ukim.mk/dob>      "1883-07-03";
+        <http://finki.ukim.mk/dod>      "1924-06-03";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/54073> , <http://finki.ukim.mk/genre/784925>;
+        <http://finki.ukim.mk/id>       "862067";
+        <http://finki.ukim.mk/image_url>
+                "https://upload.wikimedia.org/wikipedia/commons/2/26/Franz_Kafka%2C_1923.jpg";
+        <http://finki.ukim.mk/name>     "Franz";
+        <http://finki.ukim.mk/nationality>
+                "Austrian";
+        <http://finki.ukim.mk/surname>  "Kafka" .
+
+<http://finki.ukim.mk/genre/720699>
+        <http://finki.ukim.mk/genre_id>
+                "720699";
+        <http://finki.ukim.mk/genre_name>
+                "Magical Realism" .
+
+<http://finki.ukim.mk/genre/611346>
+        <http://finki.ukim.mk/genre_id>
+                "611346";
+        <http://finki.ukim.mk/genre_name>
+                "Historical Fiction" .
+
+<http://finki.ukim.mk/genre/229672>
+        <http://finki.ukim.mk/genre_id>
+                "229672";
+        <http://finki.ukim.mk/genre_name>
+                "Realist Novel" .
+
+<http://finki.ukim.mk/author/789423>
+        <http://finki.ukim.mk/biography>
+                "Dante Alighieri was an Italian poet, writer, and philosopher, best known for his epic poem 'The Divine Comedy,' which is widely considered one of the greatest works of world literature. His writings explore themes of love, morality, and the nature of existence.";
+        <http://finki.ukim.mk/dob>      "1265-06-01";
+        <http://finki.ukim.mk/dod>      "1321-09-14";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/195083> , <http://finki.ukim.mk/genre/747157>;
+        <http://finki.ukim.mk/id>       "789423";
+        <http://finki.ukim.mk/image_url>
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeVn0O-UQGeuf6H_OAZvGHiF8NyAw8mcj-1Q&s";
+        <http://finki.ukim.mk/name>     "Dante";
+        <http://finki.ukim.mk/nationality>
+                "Italian";
+        <http://finki.ukim.mk/surname>  "Alighieri" .
+
+<http://finki.ukim.mk/genre/387341>
+        <http://finki.ukim.mk/genre_id>
+                "387341";
+        <http://finki.ukim.mk/genre_name>
+                "Frame Narrative" .
+
+<http://finki.ukim.mk/genre/621375>
+        <http://finki.ukim.mk/genre_id>
+                "621375";
         <http://finki.ukim.mk/genre_name>
                 "Poetry" .
+
+<http://finki.ukim.mk/book/yJ0GeRQRFg>
+        <http://finki.ukim.mk/author>   <http://finki.ukim.mk/author/789423>;
+        <http://finki.ukim.mk/country>  "Italy";
+        <http://finki.ukim.mk/full_description>
+                "The Divine Comedy is Dante Alighieri's magnum opus, divided into three parts: Inferno, Purgatorio, and Paradiso. Written in the early 14th century, it presents a deeply allegorical journey of the soul through sin, repentance, and redemption. Dante, guided by the poet Virgil and later his idealized love Beatrice, travels through the circles of Hell, the terraces of Purgatory, and the spheres of Heaven. Along the way, he meets historical and mythological figures who represent various virtues and vices. The poem explores themes of divine justice, love, and salvation while also serving as a commentary on 14th-century Florentine politics and human morality.";
+        <http://finki.ukim.mk/genres>   <http://finki.ukim.mk/genre/747157>;
+        <http://finki.ukim.mk/image_link>
+                "images-local/the-divine-comedy.jpg";
+        <http://finki.ukim.mk/isbn>     "yJ0GeRQRFg";
+        <http://finki.ukim.mk/language>
+                "Italian";
+        <http://finki.ukim.mk/pages>    "928";
+        <http://finki.ukim.mk/publisher>
+                "Various";
+        <http://finki.ukim.mk/short_description>
+                "An epic poem chronicling Dante’s journey through Hell, Purgatory, and Heaven.";
+        <http://finki.ukim.mk/title>    "The Divine Comedy";
+        <http://finki.ukim.mk/year>     "1315" .
+
+<http://finki.ukim.mk/genre/48384>
+        <http://finki.ukim.mk/genre_id>
+                "48384";
+        <http://finki.ukim.mk/genre_name>
+                "Modernist Novel" .
+
+<http://finki.ukim.mk/genre/184675>
+        <http://finki.ukim.mk/genre_id>
+                "184675";
+        <http://finki.ukim.mk/genre_name>
+                "Satire" .
+
+<http://finki.ukim.mk/genre/991924>
+        <http://finki.ukim.mk/genre_id>
+                "991924";
+        <http://finki.ukim.mk/genre_name>
+                "Tragedy" .
+
+<http://finki.ukim.mk/genre/394032>
+        <http://finki.ukim.mk/genre_id>
+                "394032";
+        <http://finki.ukim.mk/genre_name>
+                "Personal Essays" .

@@ -8,7 +8,6 @@ public class UpdateRequest {
     public String fullDescription;
     public String language;
     public String imageLink;
-    public String link;
     public int year;
     public int pages;
     public String country;

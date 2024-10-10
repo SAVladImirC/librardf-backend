@@ -17,11 +17,14 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.locks.ReentrantLock;
 
 @Repository
 public class GenreRepository extends BaseRepository{
     Property id;
     Property name;
+
+    private final ReentrantLock lock = new ReentrantLock();
 
     public GenreRepository(RdfConfig rdfConfig) {
         super(rdfConfig);
@@ -87,6 +90,7 @@ public class GenreRepository extends BaseRepository{
 
     public boolean insert(String name){
         try{
+            lock.lock();
             Model model = loadModel();
 
             Random random = new Random();
@@ -102,7 +106,16 @@ public class GenreRepository extends BaseRepository{
         }catch (Exception e){
             e.printStackTrace();
             return false;
+        }finally {
+            lock.unlock();
         }
+    }
+
+    public boolean insertAll(String[] names){
+        for (String s : names) {
+            insert(s);
+        }
+        return true;
     }
 
     public boolean update(UpdateRequest request){

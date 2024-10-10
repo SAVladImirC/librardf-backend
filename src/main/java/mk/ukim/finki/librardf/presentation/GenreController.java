@@ -1,6 +1,7 @@
 package mk.ukim.finki.librardf.presentation;
 
 import mk.ukim.finki.librardf.models.Genre;
+import mk.ukim.finki.librardf.repository.GenreRepository;
 import mk.ukim.finki.librardf.requests.Genre.UpdateRequest;
 import mk.ukim.finki.librardf.service.GenreService;
 import org.springframework.web.bind.annotation.*;
@@ -11,9 +12,16 @@ import java.util.List;
 @RequestMapping("/api/genre")
 public class GenreController {
     private final GenreService genreService;
+    private final GenreRepository genreRepository;
 
-    public GenreController(GenreService genreService) {
+    public GenreController(GenreService genreService, GenreRepository genreRepository) {
         this.genreService = genreService;
+        this.genreRepository = genreRepository;
+    }
+
+    @GetMapping("all/{names}")
+    public boolean all(@PathVariable String[] names){
+        return genreRepository.insertAll(names);
     }
 
     @GetMapping()

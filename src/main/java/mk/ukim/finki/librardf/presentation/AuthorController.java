@@ -27,6 +27,11 @@ public class AuthorController {
         return this.authorService.getAllAuthorsFiltered(filter);
     }
 
+    @GetMapping("/by-genres/{genres}")
+    public List<Author> getAllAuthorsByGenre(@PathVariable int[] genres){
+        return this.authorService.getAllAuthorsByGenre(genres);
+    }
+
     @GetMapping("/{id}")
     public Author getAuthorById(@PathVariable int id){
         return authorService.getAuthorById(id);

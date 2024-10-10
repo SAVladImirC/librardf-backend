@@ -485,9 +485,9 @@ public class BookRepository extends BaseRepository{
             bookRes.removeAll(year).addProperty(year, String.valueOf(request.year));
             bookRes.removeAll(pages).addProperty(pages, String.valueOf(request.pages));
             bookRes.removeAll(country).addProperty(country, request.country);
-            bookRes.removeAll(authorProp).addProperty(authorProp, author);;
+            bookRes.removeAll(authorProp).addProperty(authorProp, author);
 
-            bookRes.removeAll(authorProp);
+            bookRes.removeAll(genres);
             for(int genreId: request.genres){
                 Resource genre = model.getResource(GenreProperties.BASE + genreId);
                 bookRes.addProperty(genres, genre);

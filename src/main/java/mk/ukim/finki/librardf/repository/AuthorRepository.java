@@ -126,6 +126,53 @@ public class AuthorRepository extends BaseRepository{
         return authors;
     }
 
+    public List<Author> getAllAuthorsByGenre(int[] genreIds){
+        List<Author> authors = new ArrayList<>();
+        Model model = loadModel();
+
+        StringBuilder genresFilter = new StringBuilder("VALUES ?genres {");
+
+        for (int genreId : genreIds) {
+            Resource g = model.getResource(GenreProperties.BASE + genreId);
+            genresFilter.append("<").append(g.toString()).append("> ");
+        }
+
+        genresFilter.append("}");
+
+        String sparqlQuery = "PREFIX finki: <http://finki.ukim.mk/> " +
+                "SELECT ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography (GROUP_CONCAT(?genre_id; SEPARATOR=\",\") AS ?genre_ids) (GROUP_CONCAT(?genre_name; SEPARATOR=\",\") AS ?genre_names) " +
+                "WHERE { " +
+                "    ?author finki:id ?id . " +
+                "    ?author finki:name ?name . " +
+                "    ?author finki:surname ?surname . " +
+                "    ?author finki:dob ?dob . " +
+                "    ?author finki:dod ?dod . " +
+                "    ?author finki:nationality ?nationality . " +
+                "    ?author finki:image_url ?image_url . " +
+                "    ?author finki:biography ?biography . " +
+                "    ?author finki:genres ?genres . " +
+                "    ?genres finki:genre_id ?genre_id . " +
+                "    ?genres finki:genre_name ?genre_name . " +
+                genresFilter +
+                "} GROUP BY ?id ?name ?surname ?dob ?dod ?nationality ?image_url ?biography";
+
+        try (QueryExecution qexec = QueryExecutionFactory.create(sparqlQuery, model)) {
+            ResultSet results = qexec.execSelect();
+
+            while (results.hasNext()) {
+                QuerySolution soln = results.nextSolution();
+                Author author = new Author();
+
+                // Set author properties
+                setAuthor(soln, author);
+
+                // Set the author in the book
+                authors.add(author);
+            }
+        }
+        return authors;
+    }
+
     public Author getAuthorById(int id){
         Model model = loadModel();
         Author author = new Author();
